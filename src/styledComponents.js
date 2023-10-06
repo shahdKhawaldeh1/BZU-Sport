@@ -11,9 +11,9 @@ export const Checkbox = styled.input`
   margin-right: 10px;
 `;
 export const HeaderRow = styled.tr`
-border: 2px solid rgba(51, 49, 49, 0.356);
+border: 2px solid gray;
     font-weight: bold;
-    background: rgba(51, 49, 49, 0.356);
+    background: gray;
     margin-bottom: 10px;
     display: flex;
     padding: 5px;

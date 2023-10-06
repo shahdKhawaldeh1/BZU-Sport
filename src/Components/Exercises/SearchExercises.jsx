@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Pagination from '@mui/material/Pagination';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack} from '@mui/material';
 
 import { options, fetchData } from '../../utils/FetchData'
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
@@ -20,8 +20,8 @@ export default function SearchExercises({ exercises, setExercises, bodyPart }) {
    
    return (
     <div>
-       <Box id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
-      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
+       <Box id="exercises" className="exercises-box">
+        <h2 className='heading-exercises'>Exercises </h2>
       <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
 
       {currentExercises.map((exercise, index) => (

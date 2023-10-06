@@ -1,31 +1,19 @@
-.add-title{
-    text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;  
-    margin-top: 26px;
-    padding-left: 100px;
-    display: flex;
-    justify-content: center;
-    font-size: 26px;
-}
 
-.add-title span {
-    font-size: 35px;
-    color: green;
-    font-size: 26px;
-}
+  .btn-add{
+    margin-top: 40px;
+  }
  .button-add{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     width: 145px;
-    padding: 5px 10px;
+    padding: 10px 50px;
     border-radius: 10px;
     border: none;
-    background-color: #008052;
+    background: linear-gradient(to bottom, #00ff00, #008000) !important; 
     color: white;
-    margin-top: 25px;
+    margin-top: 40px;
     font-size: 20px;
 
  }

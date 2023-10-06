@@ -1,56 +1,37 @@
-import React, { useContext } from 'react';
-import { Box,Typography} from '@mui/material';
+import React from 'react';
+import { Box } from '@mui/material';
 import BodyPart from '../BodyPart/BodyPart';
-import {ScrollMenu,VisibilityContext} from 'react-horizontal-scrolling-menu'
-import RightArrowIcon from './../../assets/images/right-arrow.png';
-import LeftArrowIcon from './../../assets/images/left-arrow.png';
+import './styles.css'
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-const LeftArrow = () => {
-
-  const { scrollPrev } = useContext(VisibilityContext);
-
-  return (
-    <Typography onClick={() => scrollPrev()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="right-arrow" />
-    </Typography>
-  );
+const slideLeft = () => {
+  var slider = document.getElementById('slider');
+  slider.scrollTo({
+    left: slider.scrollLeft - 500,
+    behavior: 'smooth'
+  });
 };
 
-const RightArrow = () => {
-  const { scrollNext } = useContext(VisibilityContext);
-
-  return (
-    <Typography onClick={() => scrollNext()} className="left-arrow">
-      <img src={RightArrowIcon} alt="right-arrow" />
-    </Typography>
-  );
+const slideRight = () => {
+  var slider = document.getElementById('slider');
+  slider.scrollTo({
+    left: slider.scrollLeft + 500,
+    behavior: 'smooth'
+  });
 };
 
-export const HorizontalScrollbar = ({data ,bodyPart ,setBodyPart}) => {
-  
+export const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
   return (
-    
-    
-  <ScrollMenu>
-
-      {data.map((item)=>(
-      <Box
-      key = {item.id|| item}
-      itemId = {item.id|| item}
-      title= {item.id|| item}
-    
-      m="0 40px"
-
-      >
-        <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
-
-
-
-      </Box>)
-      
-      )} 
-       </ScrollMenu>
-
-    
-  )
-}
+    <div className='relative d-flex items-center'>
+      <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideLeft} size={150} />
+      <div id='slider' className='w-full d-flex h-full overflow-x-scroll scroll scrollbar-hide'>
+        {data.map((item) => (
+          <Box key={item.id || item} itemId={item.id || item} title={item.id || item} m="0 40px" style={{ backgroundColor: '#bec8be' }}>
+            <BodyPart  className="m-5"item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+          </Box>
+        ))}
+      </div>
+      <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={150} />
+    </div>
+  );
+};
