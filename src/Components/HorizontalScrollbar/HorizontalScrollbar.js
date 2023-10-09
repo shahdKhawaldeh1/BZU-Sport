@@ -22,16 +22,27 @@ const slideRight = () => {
 
 export const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
   return (
-    <div className='relative d-flex items-center'>
-      <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideLeft} size={150} />
-      <div id='slider' className='w-full d-flex h-full overflow-x-scroll scroll scrollbar-hide'>
-        {data.map((item) => (
-          <Box key={item.id || item} itemId={item.id || item} title={item.id || item} m="0 40px" style={{ backgroundColor: '#bec8be' }}>
-            <BodyPart  className="m-5"item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
-          </Box>
-        ))}
-      </div>
-      <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={150} />
+
+    <>
+  <div className="container-loader">
+  <div className="loader">
+    <span className="loader-text">Exercises..</span>
+  </div>
+  </div>
+  <div className='relative d-flex items-center'>
+    <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideLeft} size={150} />
+    <div id='slider' className='w-full d-flex h-full overflow-x-scroll scroll scrollbar-hide'>
+      {data.map((item) => (
+        <Box key={item.id || item} itemId={item.id || item} title={item.id || item} m="0 40px" style={{ backgroundColor: '#bec8be' }}>
+          <BodyPart className="m-5" item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        </Box>
+      ))}
     </div>
+    <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={150} />
+  </div>
+
+
+    </>
+    
   );
 };

@@ -21,7 +21,7 @@ export default function SearchExercises({ exercises, setExercises, bodyPart }) {
    return (
     <div>
        <Box id="exercises" className="exercises-box">
-        <h2 className='heading-exercises'>Exercises </h2>
+        <h2 className='heading-exercises'>The secret of getting ahead is getting started </h2>
       <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
 
       {currentExercises.map((exercise, index) => (

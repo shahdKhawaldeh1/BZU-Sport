@@ -44,15 +44,17 @@
   }
 
 .heading-exercises {
+  background-color: #008000;
+
     text-align: center; 
-    font-size: 50px;
+    font-size: 24px;
     font-weight: bold;
     padding: 10px; 
     transition: color 0.3s, text-shadow 0.3s; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-    color: #333; 
+    color: #ffffff; 
     &:hover {
-      color: green; 
+      color: rgb(4, 4, 4); 
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); 
       
   }
