@@ -34,7 +34,7 @@ export const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
     <div id='slider' className='w-full d-flex h-full overflow-x-scroll scroll scrollbar-hide'>
       {data.map((item) => (
         <Box key={item.id || item} itemId={item.id || item} title={item.id || item} m="0 40px" style={{ backgroundColor: '#bec8be' }}>
-          <BodyPart className="m-5" item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        {bodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }
         </Box>
       ))}
     </div>

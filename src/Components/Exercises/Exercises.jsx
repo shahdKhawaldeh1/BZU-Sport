@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, TextField ,Button} from '@mui/material';
 import { FetchData,options } from '../../utils/FetchData';
-import { HorizontalScrollbar } from '../HorizontalScrollbar/HorizontalScrollbar';
+import HorizontalScrollbar from '../HorizontalScrollbar/HorizontalScrollbar';
 
 import './styles.css'
 export default function Exercises({setExercises,bodyPart,setBodyPart}) {
@@ -49,7 +49,7 @@ FetchExerciseData();
     </div>
 
     <Box>
-        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart}/> 
+    <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
     </Box>
 
     </>

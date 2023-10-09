@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Box, Stack } from '@mui/material';
 
 import Loader from './Loader';
-import { HorizontalScrollbar } from './HorizontalScrollbar/HorizontalScrollbar';
+import  HorizontalScrollbar from './HorizontalScrollbar/HorizontalScrollbar';
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
   <Box sx={{ mt: { lg: '100px', xs: '0px' } }}>
