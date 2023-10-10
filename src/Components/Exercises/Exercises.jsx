@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, TextField ,Button} from '@mui/material';
 import { FetchData,options } from '../../utils/FetchData';
-import HorizontalScrollbar from '../HorizontalScrollbar/HorizontalScrollbar';
+import {HorizontalScrollbar} from '../HorizontalScrollbar/HorizontalScrollbar';
 
 import './styles.css'
 export default function Exercises({setExercises,bodyPart,setBodyPart}) {
@@ -45,12 +45,18 @@ FetchExerciseData();
       Search
     </Button>
     
+    
   </div>
     </div>
-
+    <div className="container-loader">
+  <div className="loader">
+    <span className="loader-text">Exercises..</span>
+  </div>
+  </div>
     <Box>
     <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
     </Box>
+ 
 
     </>
   )
