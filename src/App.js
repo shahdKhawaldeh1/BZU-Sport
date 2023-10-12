@@ -5,6 +5,8 @@ import { NotFound } from './Components/NotFound/NotFound';
 import { Navbar } from './Components/Navbar/Navbar';
 import { Todo } from './Components/Todo/Todo';
 import Sport from './Components/Sport/Sport';
+import ExerciseDetail from './Components/ExercisesDetail';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path='todo' element={<Todo/>} />
         <Route path='*' element={<NotFound/>} />
         <Route path='sport' element={<Sport/>} />
+        <Route path="/exercise/:id" element={<ExerciseDetail/>} />
       </Routes>
      
     </>

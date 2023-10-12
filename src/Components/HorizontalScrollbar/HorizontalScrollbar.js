@@ -24,7 +24,6 @@ const slideRight = () => {
 
 export const HorizontalScrollbar = ({ data, bodyParts, bodyPart, setBodyPart }) => {
   return (
-    <>
     <div className='relative d-flex items-center'>
       <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideLeft} size={150} />
       <div
@@ -49,8 +48,5 @@ export const HorizontalScrollbar = ({ data, bodyParts, bodyPart, setBodyPart }) 
       </div>
       <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={150} />
     </div>
-    <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={slideRight} size={150} />
-   </>
-    
   );
 };
