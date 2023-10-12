@@ -1,0 +1,57 @@
+.headerGym {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/background-schedule.jpg.jpeg'); /* Make sure 'schedule.jpg' is in the same directory as your HTML file or provide the correct path */
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
+  .heading-container {
+    text-align: center; 
+}
+
+.heading-schedule {
+    font-size: 30px; 
+    color: green;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+  table {
+    width: 80%; 
+    border-spacing: 20px; 
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+  }
+
+  .title-table {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .content-table {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  .title-table, .content-table {
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out; 
+}
+.content-table:hover {
+    background-color: #d0cece; 
+}

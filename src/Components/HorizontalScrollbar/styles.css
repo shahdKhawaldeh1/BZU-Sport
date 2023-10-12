@@ -1,0 +1,9 @@
+.slider {
+    display: flex;
+    flex-direction: row; /* Display items in a row */
+    flex-wrap: nowrap; /* Prevent wrapping of items to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    width: 500px !important;
+  }
+  

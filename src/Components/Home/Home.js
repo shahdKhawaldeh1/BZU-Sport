@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './stylesHome.css' ;
 import logo from '../../assets/images/birzeit.jpg';
 import Photo from '../../assets/images/sport1.jpg';
 import Photo2 from '../../assets/images/sport2.jpg';
